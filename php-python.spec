@@ -4,12 +4,13 @@
 
 Summary:	Embedded Python
 Name:		php-%{modname}
-Version:	0.8.0
-Release:	%mkrel 14
+Version:	0.9.0
+Release:	%mkrel 0.0.r284003.1
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/python
-Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
+#Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
+Source0:	%{modname}.tar.gz
 Requires(pre): rpm-helper
 Requires(postun): rpm-helper
 BuildRequires:	php-devel >= 3:5.2.0
@@ -24,7 +25,7 @@ PHP.
 
 %prep
 
-%setup -q -n %{modname}-%{version}
+%setup -q -n %{modname}
 [ "../package*.xml" != "/" ] && mv ../package*.xml .
 
 # fix permissions
