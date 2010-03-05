@@ -26,10 +26,13 @@ PHP.
 %prep
 
 %setup -q -n %{modname}
-[ "../package*.xml" != "/" ] && mv ../package*.xml .
 
 # fix permissions
 find . -type f | xargs chmod 644
+
+for i in `find . -type d -name .svn`; do
+    if [ -e "$i" ]; then rm -rf $i; fi >&/dev/null
+done
 
 # strip away annoying ^M
 find . -type f|xargs file|grep 'CRLF'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
@@ -77,7 +80,7 @@ rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
-%doc package*.xml docs examples tests CREDITS
+%doc docs examples tests CREDITS
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
 
