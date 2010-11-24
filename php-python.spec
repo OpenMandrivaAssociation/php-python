@@ -5,7 +5,7 @@
 Summary:	Embedded Python
 Name:		php-%{modname}
 Version:	0.9.0
-Release:	%mkrel 0.0.r284003.2
+Release:	%mkrel 0.0.r284003.3
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/python
