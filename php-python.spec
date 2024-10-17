@@ -8,7 +8,7 @@ Version:	0.9.0
 Release:	%mkrel 0.0.r284003.10
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/python
+URL:		https://pecl.php.net/package/python
 #Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source0:	%{modname}.tar.gz
 Requires(pre): rpm-helper
