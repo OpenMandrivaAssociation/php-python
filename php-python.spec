@@ -13,6 +13,11 @@ URL:		https://pecl.php.net/package/python
 Source0:	%{modname}.tar.gz
 Requires(pre): rpm-helper
 Requires(postun): rpm-helper
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	file
 BuildRequires:	python-devel >= 2.5
